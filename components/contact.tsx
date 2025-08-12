@@ -1,7 +1,5 @@
 "use client"
 
-import type React from "react"
-
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
@@ -11,35 +9,43 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Github, Linkedin, Mail, MessageSquare } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
+import { sendContactEmail } from "@/app/actions/contact"
 
 export default function Contact() {
   const { toast } = useToast()
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  })
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleSubmit = async (formData: FormData) => {
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      const result = await sendContactEmail(formData)
 
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    })
+      if (result.success) {
+        toast({
+          title: "Message sent!",
+          description: result.message,
+        })
 
-    setFormData({ name: "", email: "", message: "" })
-    setIsSubmitting(false)
+        // Reset form
+        const form = document.getElementById("contact-form") as HTMLFormElement
+        form?.reset()
+      } else {
+        toast({
+          title: "Error",
+          description: result.message,
+          variant: "destructive",
+        })
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -68,17 +74,10 @@ export default function Contact() {
           >
             <Card>
               <CardContent className="p-6">
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form id="contact-form" action={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
                     <Label htmlFor="name">Name</Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      placeholder="Your name"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                    />
+                    <Input id="name" name="name" placeholder="Your name" required disabled={isSubmitting} />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
@@ -88,8 +87,7 @@ export default function Contact() {
                       type="email"
                       placeholder="Your email address"
                       required
-                      value={formData.email}
-                      onChange={handleChange}
+                      disabled={isSubmitting}
                     />
                   </div>
                   <div className="space-y-2">
@@ -100,8 +98,7 @@ export default function Contact() {
                       placeholder="Your message"
                       rows={5}
                       required
-                      value={formData.message}
-                      onChange={handleChange}
+                      disabled={isSubmitting}
                     />
                   </div>
                   <Button type="submit" className="w-full" disabled={isSubmitting}>

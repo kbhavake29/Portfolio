@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Badge } from "@/components/ui/badge"
 import { CalendarDays, MapPin } from "lucide-react"
 
 type Experience = {
@@ -9,7 +8,6 @@ type Experience = {
   position: string
   period: string
   location: string
-  technologies: string[]
   logo: string
 }
 
@@ -20,7 +18,6 @@ export default function Experience() {
       position: "Software Engineering Intern",
       period: "May 2024 - Present",
       location: "Milwaukee, WI",
-      technologies: ["React", "Node.js", "Redis", "Docker", "Azure", "KQL", "Grafana", "Jest", "Prometheus"],
       logo: "/images/johnson-controls-logo.jpeg",
     },
     {
@@ -28,7 +25,6 @@ export default function Experience() {
       position: "Software Engineer",
       period: "Aug 2019 - June 2022",
       location: "Remote",
-      technologies: ["Python", "Redis", "Apache Kafka", "AWS", "Azure", "Node.js", "Jenkins", "Databricks", "PySpark"],
       logo: "/images/ibm-logo.png",
     },
   ]
@@ -79,20 +75,12 @@ export default function Experience() {
                     </div>
                   </div>
 
-                  <div className="flex flex-col md:flex-row md:items-center gap-2 mb-4">
+                  <div className="flex flex-col md:flex-row md:items-center gap-2">
                     <h4 className="text-lg font-medium text-primary">{exp.company}</h4>
                     <div className="flex items-center gap-1 text-sm text-muted-foreground">
                       <MapPin className="w-4 h-4" />
                       {exp.location}
                     </div>
-                  </div>
-
-                  <div className="flex flex-wrap gap-2">
-                    {exp.technologies.map((tech) => (
-                      <Badge key={tech} variant="secondary" className="text-xs">
-                        {tech}
-                      </Badge>
-                    ))}
                   </div>
                 </div>
               </div>

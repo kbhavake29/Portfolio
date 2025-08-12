@@ -5,14 +5,14 @@ import { motion } from "framer-motion"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Github } from "lucide-react" // Removed ExternalLink as it's no longer needed
+import { Github } from "lucide-react"
 
 type Repository = {
   id: number
   name: string
   description: string
   html_url: string
-  homepage: string // Keep homepage in type for data consistency, but it won't be rendered
+  homepage: string
   topics: string[]
   language: string
 }
@@ -21,9 +21,7 @@ export default function Projects() {
   const [repos, setRepos] = useState<Repository[]>([])
   const [loading, setLoading] = useState(true)
 
-  // Mock data for demonstration - in a real app, this would come from GitHub API
   useEffect(() => {
-    // Simulating API fetch
     setTimeout(() => {
       setRepos([
         {
@@ -31,7 +29,7 @@ export default function Projects() {
           name: "Smart Home Management System",
           description:
             "A scalable, full-stack e-commerce platform employing Java microservices with REST API, ElasticSearch with OpenAI embeddings for real-time semantic search, optimized to handle 10k+ concurrent users.",
-          html_url: "https://github.com/kbhavake29/smart-home-system",
+          html_url: "https://github.com/kbhavake29/smart-home-management-system",
           homepage: "https://smart-home-demo.vercel.app",
           topics: ["react", "typescript", "java", "mysql", "mongodb", "elasticsearch", "openai"],
           language: "TypeScript",
@@ -41,7 +39,7 @@ export default function Projects() {
           name: "RoadSense AI - Mobile Road Condition Detection",
           description:
             "Cross-platform mobile application using Flutter with Python microservices and AWS that detects road conditions through inertial sensor data with real-time ML classification.",
-          html_url: "https://github.com/kbhavake29/roadsense-ai",
+          html_url: "https://github.com/kbhavake29/RoadSense",
           homepage: "https://roadsense-ai-demo.vercel.app",
           topics: ["flutter", "python", "aws", "machine-learning", "mobile-development", "iot"],
           language: "Python",
@@ -120,8 +118,6 @@ export default function Projects() {
                     </div>
                   </CardContent>
                   <CardFooter className="flex justify-end">
-                    {" "}
-                    {/* Adjusted to flex-end for single button */}
                     <Button variant="outline" size="sm" asChild>
                       <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
                         <Github className="mr-2 h-4 w-4" />
