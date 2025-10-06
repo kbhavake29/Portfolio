@@ -12,7 +12,7 @@ export default function Skills() {
   const skillCategories: SkillCategory[] = [
     {
       name: "Programming Languages",
-      skills: ["Python", "TypeScript", "JavaScript", "C/C++", "SQL", "KQL", "HTML/CSS"],
+      skills: ["Python", "TypeScript", "JavaScript", "C/C++", "Java", "Swift", "Kotlin", "Flutter", "SQL", "KQL", "HTML/CSS"],
     },
     {
       name: "Frontend & UI",

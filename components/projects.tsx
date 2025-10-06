@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Github } from "lucide-react"
+import { Github, ExternalLink } from "lucide-react"
 
 type Repository = {
   id: number
@@ -26,6 +26,26 @@ export default function Projects() {
       setRepos([
         {
           id: 1,
+          name: "ThoughtFabric.ai",
+          description:
+            "Visual AI Workflow Platform built with Rust and Tauri enabling AI-powered mind mapping with multi-model support. Implements on-device processing for secure data handling and voice agent capabilities for enhanced user interaction.",
+          html_url: "https://github.com/kbhavake29/thoughtfabric",
+          homepage: "https://thoughtfabric.ai/",
+          topics: ["rust", "tauri", "voice-agents", "multi-llm", "ai", "workflow", "desktop-app"],
+          language: "Rust",
+        },
+        {
+          id: 2,
+          name: "Database Management System",
+          description:
+            "Mini-DBMS with Storage Manager, Buffer Manager, and Record Manager implemented in C/C++, supporting file I/O, page replacement strategies (FIFO, LRU), and integrated MATLAB for simulation and performance validation.",
+          html_url: "https://github.com/kbhavake29/database-management-system",
+          homepage: "",
+          topics: ["c", "cpp", "dbms", "storage-manager", "buffer-manager", "fifo", "lru"],
+          language: "C++",
+        },
+        {
+          id: 3,
           name: "Smart Home Management System",
           description:
             "A scalable, full-stack e-commerce platform employing Java microservices with REST API, ElasticSearch with OpenAI embeddings for real-time semantic search, optimized to handle 10k+ concurrent users.",
@@ -35,17 +55,17 @@ export default function Projects() {
           language: "TypeScript",
         },
         {
-          id: 2,
-          name: "RoadSense AI - Mobile Road Condition Detection",
+          id: 4,
+          name: "RoadSense AI",
           description:
             "Cross-platform mobile application using Flutter with Python microservices and AWS that detects road conditions through inertial sensor data with real-time ML classification.",
           html_url: "https://github.com/kbhavake29/RoadSense",
           homepage: "https://roadsense-ai-demo.vercel.app",
           topics: ["flutter", "python", "aws", "machine-learning", "mobile-development", "iot"],
-          language: "Python",
+          language: "Dart",
         },
         {
-          id: 3,
+          id: 5,
           name: "Smart Expense Management System",
           description:
             "AI-powered expense tracking application with receipt scanning, automatic categorization, and budget analytics. Features real-time spending insights and integration with banking APIs.",
@@ -55,7 +75,7 @@ export default function Projects() {
           language: "TypeScript",
         },
         {
-          id: 4,
+          id: 6,
           name: "Smart Travel System",
           description:
             "Comprehensive travel planning platform with AI-powered itinerary generation, real-time weather integration, booking management, and collaborative trip planning features.",
@@ -103,27 +123,40 @@ export default function Projects() {
                 <Card className="h-full flex flex-col">
                   <CardHeader>
                     <CardTitle className="flex items-start justify-between">
-                      <span>{repo.name}</span>
+                      <span className="text-base">{repo.name}</span>
                       <Badge variant="outline">{repo.language}</Badge>
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow">
-                    <p className="text-muted-foreground mb-4">{repo.description}</p>
+                    <p className="text-sm text-muted-foreground mb-4">{repo.description}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {repo.topics.slice(0, 4).map((topic) => (
                         <Badge key={topic} variant="secondary" className="text-xs">
                           {topic}
                         </Badge>
                       ))}
+                      {repo.topics.length > 4 && (
+                        <Badge variant="secondary" className="text-xs">
+                          +{repo.topics.length - 4}
+                        </Badge>
+                      )}
                     </div>
                   </CardContent>
-                  <CardFooter className="flex justify-end">
+                  <CardFooter className="flex gap-2 justify-end">
                     <Button variant="outline" size="sm" asChild>
                       <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
                         <Github className="mr-2 h-4 w-4" />
-                        Source
+                        Code
                       </a>
                     </Button>
+                    {repo.homepage && (
+                      <Button variant="outline" size="sm" asChild>
+                        <a href={repo.homepage} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          Live
+                        </a>
+                      </Button>
+                    )}
                   </CardFooter>
                 </Card>
               </motion.div>
