@@ -66,23 +66,23 @@ export default function Projects() {
         },
         {
           id: 5,
-          name: "Smart Expense Management System",
+          name: "MindfulMe",
           description:
-            "AI-powered expense tracking application with receipt scanning, automatic categorization, and budget analytics. Features real-time spending insights and integration with banking APIs.",
-          html_url: "https://github.com/kbhavake29/smart-expense-manager",
-          homepage: "https://expense-manager-demo.vercel.app",
-          topics: ["react", "nodejs", "mongodb", "ai", "ocr", "analytics", "fintech"],
-          language: "TypeScript",
+            "Voice-first mindfulness journaling application that converts spoken thoughts into structured, AI-analyzed entries. Features high-quality audio capture processed by AI assistant Mimi for mental well-being insights and support.",
+          html_url: "https://github.com/kbhavake29/mindfulme",
+          homepage: "",
+          topics: ["voice-recognition", "ai", "mental-health", "journaling", "mobile-app", "mindfulness"],
+          language: "JavaScript",
         },
         {
           id: 6,
-          name: "Smart Travel System",
+          name: "PostureAI",
           description:
-            "Comprehensive travel planning platform with AI-powered itinerary generation, real-time weather integration, booking management, and collaborative trip planning features.",
-          html_url: "https://github.com/kbhavake29/smart-travel-system",
-          homepage: "https://travel-system-demo.vercel.app",
-          topics: ["nextjs", "typescript", "postgresql", "ai", "maps", "weather-api", "travel"],
-          language: "TypeScript",
+            "Real-time, AI-powered exercise tracking Android application using on-device machine learning. Analyzes exercise form and counts repetitions with MediaPipe pose landmarker model, providing immediate feedback without internet connectivity.",
+          html_url: "https://github.com/kbhavake29/PostureAI",
+          homepage: "",
+          topics: ["android", "machine-learning", "mediapipe", "fitness", "pose-detection", "offline-ai"],
+          language: "Java",
         },
       ])
       setLoading(false)
