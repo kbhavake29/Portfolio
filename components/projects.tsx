@@ -71,8 +71,8 @@ export default function Projects() {
             "Voice-first mindfulness journaling application that converts spoken thoughts into structured, AI-analyzed entries. Features high-quality audio capture processed by AI assistant Mimi for mental well-being insights and support.",
           html_url: "https://github.com/kbhavake29/mindfulme",
           homepage: "",
-          topics: ["voice-recognition", "ai", "mental-health", "journaling", "mobile-app", "mindfulness"],
-          language: "JavaScript",
+          topics: ["voice-recognition", "ai", "mental-health", "journaling", "ios", "swift", "xcode"],
+          language: "Swift",
         },
         {
           id: 6,
@@ -81,8 +81,8 @@ export default function Projects() {
             "Real-time, AI-powered exercise tracking Android application using on-device machine learning. Analyzes exercise form and counts repetitions with MediaPipe pose landmarker model, providing immediate feedback without internet connectivity.",
           html_url: "https://github.com/kbhavake29/PostureAI",
           homepage: "",
-          topics: ["android", "machine-learning", "mediapipe", "fitness", "pose-detection", "offline-ai"],
-          language: "Java",
+          topics: ["android", "machine-learning", "mediapipe", "fitness", "pose-detection", "offline-ai", "kotlin", "android-studio"],
+          language: "Kotlin",
         },
       ])
       setLoading(false)
