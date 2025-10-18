@@ -21,7 +21,7 @@ export default function Experience() {
       logo: "/images/johnson-controls-logo.jpeg",
     },
     {
-      company: "IBM (Kyndryl)",
+      company: "IBM",
       position: "Software Engineer",
       period: "Aug 2019 - June 2022",
       location: "Remote",
