@@ -15,7 +15,7 @@ export default function Experience() {
   const experiences: Experience[] = [
     {
       company: "Johnson Controls",
-      position: "Software Engineer",
+      position: "Software Engineering Intern",
       period: "May 2024 - Present",
       location: "Milwaukee, WI",
       logo: "/images/johnson-controls-logo.jpeg",
