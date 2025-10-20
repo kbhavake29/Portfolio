@@ -35,8 +35,8 @@ export default function Skills() {
       skills: ["OpenAI", "LangChain", "PyTorch", "PySpark", "Apache Kafka", "Databricks", "RAG"],
     },
     {
-      name: "Monitoring & Tools",
-      skills: ["Prometheus", "Grafana", "Git", "Jira", "Jest", "Cypress", "Dapr"],
+      name: "Development Tools & IDEs",
+      skills: ["Xcode", "Android Studio", "Prometheus", "Grafana", "Git", "Jira", "Jest", "Cypress", "Dapr"],
     },
   ]
 
