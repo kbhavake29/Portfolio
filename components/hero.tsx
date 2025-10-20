@@ -18,7 +18,7 @@ export default function Hero() {
   return (
     <section className={`relative h-screen flex flex-col items-center justify-center px-4 overflow-hidden text-foreground ${
       theme === 'dark' 
-        ? 'bg-gradient-to-r from-gray-900 to-gray-800' 
+        ? 'bg-black' 
         : 'bg-gradient-to-r from-[#CFEEF2] to-[#DED8E8]'
     }`}>
       <motion.div
