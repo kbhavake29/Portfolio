@@ -3,9 +3,11 @@
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import { useTheme } from "next-themes"
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false)
+  const { theme } = useTheme()
 
   useEffect(() => {
     setMounted(true)
@@ -14,7 +16,11 @@ export default function Hero() {
   if (!mounted) return null
 
   return (
-    <section className="relative h-screen flex flex-col items-center justify-center px-4 overflow-hidden text-foreground bg-gradient-to-r from-[#CFEEF2] to-[#DED8E8]">
+    <section className={`relative h-screen flex flex-col items-center justify-center px-4 overflow-hidden text-foreground ${
+      theme === 'dark' 
+        ? 'bg-gradient-to-r from-gray-900 to-gray-800' 
+        : 'bg-gradient-to-r from-[#CFEEF2] to-[#DED8E8]'
+    }`}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
