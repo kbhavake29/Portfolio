@@ -19,11 +19,6 @@ export default function Travel() {
       src: "/images/img-3.jpg",
       alt: "Hiking Adventure", 
       activity: "Hiking"
-    },
-    {
-      src: "/images/img-4.jpg",
-      alt: "Exploring New Places",
-      activity: "Exploring"
     }
   ]
 
@@ -40,12 +35,13 @@ export default function Travel() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Adventures & Exploration</h2>
           <div className="h-1 w-20 bg-primary mx-auto mb-4"></div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            When I'm not coding, I love diving into the depths, kayaking through waters, 
-            hiking mountain trails, and exploring unexplored places to see the beautiful world around us 🌍
+            Beyond the digital realm, I find my balance in the great outdoors. From diving into crystal-clear waters 
+            to kayaking through serene lakes and conquering mountain peaks, I believe in living life to the fullest 
+            and discovering the world's hidden treasures 🌍
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
           {travelImages.map((image, index) => (
             <motion.div
               key={index}
