@@ -9,6 +9,7 @@ type SkillCategory = {
 }
 
 export default function Skills() {
+  // Skills categories with development tools and IDEs
   const skillCategories: SkillCategory[] = [
     {
       name: "Programming Languages",
