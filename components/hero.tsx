@@ -36,7 +36,7 @@ export default function Hero() {
           className="w-40 h-40 md:w-56 md:h-56 rounded-full object-cover mx-auto mb-6 border-4 border-primary shadow-lg"
         />
         <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-          Hello, I'm Komal Bhavake, a Software Engineer 👩‍💻
+          Hello, I'm Komal Bhavake, a Software Engineer Full-time and Traveler Part-time 👩‍💻✈️
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg" onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}>

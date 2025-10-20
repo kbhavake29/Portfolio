@@ -4,6 +4,7 @@ import About from "@/components/about"
 import Experience from "@/components/experience"
 import Skills from "@/components/skills"
 import Projects from "@/components/projects"
+import Travel from "@/components/travel"
 import Contact from "@/components/contact"
 import ThemeToggle from "@/components/theme-toggle"
 
@@ -23,6 +24,7 @@ export default function Home() {
       <Experience />
       <Skills />
       <Projects />
+      <Travel />
       <Contact />
     </main>
   )
