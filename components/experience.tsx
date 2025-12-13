@@ -17,7 +17,7 @@ export default function Experience() {
       company: "Johnson Controls",
       position: "Software Engineering Intern",
       period: "May 2024 - Dec 2025",
-      location: "Milwaukee, WI",
+      location: "Milwaukee",
       logo: "/images/johnson-controls-logo.jpeg",
     },
     {
