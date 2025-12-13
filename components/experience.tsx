@@ -12,6 +12,7 @@ type Experience = {
 }
 
 export default function Experience() {
+  // Work experience entries
   const experiences: Experience[] = [
     {
       company: "Johnson Controls",
