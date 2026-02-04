@@ -14,16 +14,23 @@ type Experience = {
 export default function Experience() {
   // Work experience entries
   const experiences: Experience[] = [
+        {
+      company: "Hinckley Medical",
+      position: "Software Engineer",
+      period: "Feb 2026 - Present",
+      location: "Bloomington, MN",
+      logo: "/images/hm-logo.jpeg",
+    },
     {
       company: "Johnson Controls",
-      position: "Software Engineer",
+      position: "Software Engineer Intern",
       period: "May 2024 - Dec 2025",
       location: "Milwaukee, WI",
       logo: "/images/johnson-controls-logo.jpeg",
     },
     {
       company: "IBM",
-      position: "Software Engineer",
+      position: "System Administrator",
       period: "Aug 2019 - June 2022",
       location: "Remote",
       logo: "/images/ibm-logo.png",
