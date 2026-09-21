@@ -30,7 +30,7 @@ export default function Experience() {
     },
     {
       company: "IBM",
-      position: "System Administrator",
+      position: "Software Engineer (System Admin)",
       period: "Aug 2019 - June 2022",
       location: "Remote",
       logo: "/images/ibm-logo.png",
