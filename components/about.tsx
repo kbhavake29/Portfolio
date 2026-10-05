@@ -26,22 +26,24 @@ export default function About() {
           viewport={{ once: true }}
         >
           <Card>
-            <CardContent className="p-6 text-center">
-              <p className="text-lg mb-4">
-                I'm a software engineer who loves building things and then making them better. Over the last five
-                years I've worked across the whole stack, from system design and backend architecture to the
-                interfaces people actually use, and I care most about the whole journey from idea to shipped.
-              </p>
-              <p className="text-lg mb-4">
-                Lately I've been spending most of my time on the AI side, mainly inference and retrieval. A lot of
-                it is unglamorous. You profile a slow request, find out the bottleneck was retrieval and not the
-                model, fix it, and go looking for the next one. I enjoy that part more than I probably should.
-              </p>
-              <p className="text-lg mb-6">
-                I did my Master's in Computer Science at Illinois Tech. Outside of work, I'm usually building
-                something small to try out an idea I read about that week.
-              </p>
-              <div className="flex flex-wrap justify-center gap-2">
+            <CardContent className="p-8 md:p-12">
+              <div className="mx-auto max-w-3xl space-y-5 text-left text-lg leading-relaxed text-muted-foreground">
+                <p className="text-foreground">
+                  I'm a software engineer who loves building things and then making them better. Over the last five
+                  years I've worked across the whole stack, from system design and backend architecture to the
+                  interfaces people actually use, and I care most about the whole journey from idea to shipped.
+                </p>
+                <p>
+                  Lately I've been spending most of my time on the AI side, mainly inference and retrieval. A lot of
+                  it is unglamorous. You profile a slow request, find out the bottleneck was retrieval and not the
+                  model, fix it, and go looking for the next one. I enjoy that part more than I probably should.
+                </p>
+                <p>
+                  I did my Master's in Computer Science at Illinois Tech. Outside of work, I'm usually building
+                  something small to try out an idea I read about that week.
+                </p>
+              </div>
+              <div className="mx-auto mt-8 flex max-w-3xl flex-wrap gap-2 border-t pt-6">
                 {[
                   "Inference Engineering",
                   "RAG Pipelines",
