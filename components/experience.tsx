@@ -1,20 +1,20 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { CalendarDays, MapPin } from "lucide-react"
+import { motion } from "framer-motion";
+import { CalendarDays, MapPin } from "lucide-react";
 
 type Experience = {
-  company: string
-  position: string
-  period: string
-  location: string
-  logo: string
-}
+  company: string;
+  position: string;
+  period: string;
+  location: string;
+  logo: string;
+};
 
 export default function Experience() {
   // Work experience entries
   const experiences: Experience[] = [
-        {
+    {
       company: "Hinckley Medical",
       position: "Software Engineer",
       period: "Feb 2026 - Present",
@@ -23,7 +23,7 @@ export default function Experience() {
     },
     {
       company: "Johnson Controls",
-      position: "Software Engineer Intern",
+      position: "Software Engineer",
       period: "May 2024 - Dec 2025",
       location: "Milwaukee, WI",
       logo: "/images/johnson-controls-logo.jpeg",
@@ -35,10 +35,13 @@ export default function Experience() {
       location: "Remote",
       logo: "/images/ibm-logo.png",
     },
-  ]
+  ];
 
   return (
-    <section id="experience" className="py-20 px-4 md:px-6 lg:px-8 scroll-mt-16">
+    <section
+      id="experience"
+      className="py-20 px-4 md:px-6 lg:px-8 scroll-mt-16"
+    >
       <div className="container mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,8 +50,12 @@ export default function Experience() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">Work Experience</h2>
-          <p className="text-muted-foreground">My professional journey in software engineering</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-2">
+            Work Experience
+          </h2>
+          <p className="text-muted-foreground">
+            My professional journey in software engineering
+          </p>
         </motion.div>
 
         <div className="space-y-12">
@@ -62,7 +69,9 @@ export default function Experience() {
               className="relative"
             >
               {/* Timeline line */}
-              {index !== experiences.length - 1 && <div className="absolute left-6 top-7 w-px h-full bg-border"></div>}
+              {index !== experiences.length - 1 && (
+                <div className="absolute left-6 top-7 w-px h-full bg-border"></div>
+              )}
 
               <div className="flex gap-6">
                 {/* Company logo */}
@@ -84,7 +93,9 @@ export default function Experience() {
                   </div>
 
                   <div className="flex flex-col md:flex-row md:items-center gap-2">
-                    <h4 className="text-lg font-medium text-primary">{exp.company}</h4>
+                    <h4 className="text-lg font-medium text-primary">
+                      {exp.company}
+                    </h4>
                     <div className="flex items-center gap-1 text-sm text-muted-foreground">
                       <MapPin className="w-4 h-4" />
                       {exp.location}
@@ -97,5 +108,5 @@ export default function Experience() {
         </div>
       </div>
     </section>
-  )
+  );
 }
