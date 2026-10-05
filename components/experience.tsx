@@ -15,7 +15,7 @@ export default function Experience() {
   // Work experience entries
   const experiences: Experience[] = [
     {
-      company: "Hinckley Medical",
+      company: "OneDose(Hinckley Medical)",
       position: "Software Engineer",
       period: "Feb 2026 - Present",
       location: "Bloomington, MN",
