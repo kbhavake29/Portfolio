@@ -11,7 +11,7 @@ type SkillCategory = {
 }
 
 export default function Skills() {
-  const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set(["Programming Languages", "Frontend & UI"]))
+  const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set(["Programming", "Development", "DevOps & Testing", "AI/ML"]))
   
   const toggleCategory = (categoryName: string) => {
     setExpandedCategories(prev => {
@@ -25,35 +25,23 @@ export default function Skills() {
     })
   }
 
-  // Skills categories with development tools and IDEs
+  // Skills categories, matched to resume
   const skillCategories: SkillCategory[] = [
     {
-      name: "Programming Languages",
-      skills: ["Python", "TypeScript", "JavaScript", "C/C++", "Java", "Swift", "Kotlin", "Flutter", "SQL", "KQL", "HTML/CSS"],
+      name: "Programming",
+      skills: ["C/C++", "Python", "Rust", "TypeScript", "JavaScript", "SQL", "Swift"],
     },
     {
-      name: "Frontend & UI",
-      skills: ["React", "Next.js", "Angular", "Flutter", "Tailwind CSS", "Redux", "Vue.js"],
+      name: "Development",
+      skills: ["Linux", "GDB", "LLDB", "Bash/Shell Scripting", "Log Analysis", "REST APIs", "GraphQL", "React", "Node.js"],
     },
     {
-      name: "Backend & APIs",
-      skills: ["Node.js", "Express.js", "REST APIs", "GraphQL", "Java Servlets", "Microservices"],
+      name: "DevOps & Testing",
+      skills: ["AWS", "GCP", "Docker", "Kubernetes", "Jenkins", "CI/CD", "Grafana", "PostgreSQL", "Redis", "Kafka"],
     },
     {
-      name: "Databases",
-      skills: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "ElasticSearch", "Vector Databases"],
-    },
-    {
-      name: "Cloud & DevOps",
-      skills: ["AWS", "Azure", "GCP", "Docker", "Kubernetes", "Jenkins", "CI/CD", "Terraform"],
-    },
-    {
-      name: "AI/ML & Data",
-      skills: ["OpenAI", "LangChain", "PyTorch", "PySpark", "Apache Kafka", "Databricks", "RAG"],
-    },
-    {
-      name: "Development Tools & IDEs",
-      skills: ["Xcode", "Android Studio", "Prometheus", "Grafana", "Git", "Jira", "Jest", "Cypress", "Dapr"],
+      name: "AI/ML",
+      skills: ["PyTorch", "TensorFlow", "Generative AI", "RAG", "LangChain", "Vector Databases"],
     },
   ]
 
@@ -71,7 +59,7 @@ export default function Skills() {
           <p className="text-muted-foreground max-w-2xl mx-auto">Technologies I work with to build scalable solutions</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {skillCategories.map((category, index) => {
             const isExpanded = expandedCategories.has(category.name)
             return (

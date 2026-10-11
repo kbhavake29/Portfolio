@@ -25,6 +25,16 @@ export default function Projects() {
     setTimeout(() => {
       setRepos([
         {
+          id: 0,
+          name: "Inference Performance Profiler",
+          description:
+            "Open-source observability library for LLM inference pipelines, enabling developers to trace request latency, memory usage, and throughput to diagnose bottlenecks and detect performance regressions.",
+          html_url: "https://github.com/kbhavake29/Performance-profiler",
+          homepage: "",
+          topics: ["cpp", "python", "opentelemetry", "grafana", "llm-inference", "observability"],
+          language: "Python",
+        },
+        {
           id: 1,
           name: "ThoughtFabric.ai",
           description:
@@ -73,16 +83,6 @@ export default function Projects() {
           homepage: "",
           topics: ["c", "cpp", "dbms", "storage-manager", "buffer-manager", "fifo", "lru"],
           language: "C++",
-        },
-        {
-          id: 6,
-          name: "Smart Home Management System",
-          description:
-            "A scalable, full-stack e-commerce platform employing Java microservices with REST API, ElasticSearch with OpenAI embeddings for real-time semantic search, optimized to handle 10k+ concurrent users.",
-          html_url: "https://github.com/kbhavake29/smart-home-management-system",
-          homepage: "https://smart-home-demo.vercel.app",
-          topics: ["react", "typescript", "java", "mysql", "mongodb", "elasticsearch", "openai"],
-          language: "TypeScript",
         },
       ])
       setLoading(false)

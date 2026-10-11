@@ -19,7 +19,7 @@ export default function Experience() {
       position: "Software Engineer",
       period: "Feb 2026 - Present",
       location: "Bloomington, MN",
-      logo: "/images/hm-logo.jpeg",
+      logo: "/images/onedose-logo.png",
     },
     {
       company: "Johnson Controls",
@@ -68,18 +68,13 @@ export default function Experience() {
               viewport={{ once: true }}
               className="relative"
             >
-              {/* Timeline line */}
-              {index !== experiences.length - 1 && (
-                <div className="absolute left-6 top-7 w-px h-full bg-border"></div>
-              )}
-
               <div className="flex gap-6">
                 {/* Company logo */}
-                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center mt-1">
+                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center mt-1 rounded-full overflow-hidden border bg-white">
                   <img
                     src={exp.logo || "/placeholder.svg"}
                     alt={`${exp.company} logo`}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover"
                   />
                 </div>
 
