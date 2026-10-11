@@ -31,7 +31,7 @@ export default function Projects() {
             "Open-source observability library for LLM inference pipelines, enabling developers to trace request latency, memory usage, and throughput to diagnose bottlenecks and detect performance regressions.",
           html_url: "https://github.com/kbhavake29/Performance-profiler",
           homepage: "",
-          topics: ["cpp", "python", "opentelemetry", "grafana", "llm-inference", "observability"],
+          topics: ["C++", "python", "opentelemetry", "grafana", "llm-inference", "observability"],
           language: "Python",
         },
         {
@@ -81,7 +81,7 @@ export default function Projects() {
             "Mini-DBMS with Storage Manager, Buffer Manager, and Record Manager implemented in C/C++, supporting file I/O, page replacement strategies (FIFO, LRU), and integrated MATLAB for simulation and performance validation.",
           html_url: "https://github.com/kbhavake29/database-management-system",
           homepage: "",
-          topics: ["c", "cpp", "dbms", "storage-manager", "buffer-manager", "fifo", "lru"],
+          topics: ["C", "C++", "dbms", "storage-manager", "buffer-manager", "fifo", "lru"],
           language: "C++",
         },
       ])

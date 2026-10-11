@@ -68,6 +68,11 @@ export default function Experience() {
               viewport={{ once: true }}
               className="relative"
             >
+              {/* Timeline connector: runs from below this logo to just above the next one */}
+              {index !== experiences.length - 1 && (
+                <div className="absolute left-6 -translate-x-1/2 top-[3.75rem] -bottom-[2.75rem] w-0.5 rounded-full bg-gradient-to-b from-primary/60 to-border"></div>
+              )}
+
               <div className="flex gap-6">
                 {/* Company logo */}
                 <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center mt-1 rounded-full overflow-hidden border bg-white">

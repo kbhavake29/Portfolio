@@ -42,7 +42,7 @@ export async function sendContactEmail(formData: FormData) {
   }
 
   try {
-    await resend.emails.send({
+    const { error: sendError } = await resend.emails.send({
       from: 'Portfolio Contact <onboarding@resend.dev>',
       to: 'kabhavake@gmail.com',
       subject: `New Portfolio Contact from ${name.trim()}`,
@@ -73,6 +73,14 @@ export async function sendContactEmail(formData: FormData) {
         </div>
       `,
     })
+
+    if (sendError) {
+      console.error("Resend rejected contact email:", sendError)
+      return {
+        success: false,
+        message: "Sorry, there was an error sending your message. Please try again.",
+      }
+    }
 
     return {
       success: true,

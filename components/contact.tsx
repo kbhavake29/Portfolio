@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
-import { Github, Linkedin, Mail, MessageSquare } from "lucide-react"
+import { Github, Linkedin, MessageSquare } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
 import { sendContactEmail } from "@/app/actions/contact"
 
@@ -122,21 +122,6 @@ export default function Contact() {
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
                     <div className="p-3 rounded-full bg-primary/10 text-primary">
-                      <Mail className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium">Email</h4>
-                      <a
-                        href="mailto:kabhavake@gmail.com"
-                        className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        kabhavake@gmail.com
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 rounded-full bg-primary/10 text-primary">
                       <Github className="h-6 w-6" />
                     </div>
                     <div>
@@ -177,18 +162,6 @@ export default function Contact() {
                       <h4 className="font-medium">Education</h4>
                       <p className="text-sm text-muted-foreground">
                         Master of Computer Science - Illinois Institute of Technology (2023-2024)
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 rounded-full bg-primary/10 text-primary">
-                      <MessageSquare className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium">Availability</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Open to full-time software engineering opportunities
                       </p>
                     </div>
                   </div>
